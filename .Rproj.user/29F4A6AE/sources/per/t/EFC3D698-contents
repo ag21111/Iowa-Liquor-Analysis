@@ -1,0 +1,25 @@
+
+# Load necessary packages and setup environment  --------------------------
+
+  ### SET WORKING DIRECTORY ###
+  # Uncomment out line #6 and set working directory to the 02 scripts folder.
+  # setwd("C:/Users/azizg/Downloads/Cybersyn Case/~Production/02 Scripts")
+  
+  # Clear the global environment and run garbage collection
+  rm(list = names(.GlobalEnv))
+  gc()
+
+  # Load header script
+  source("00 Header.R")
+  
+  # Manage packages - set snapshot date, check R version, and package location
+  manage_packages(snap.date <- "2024-10-08", getRversion())
+  
+  # Run processing and analysis
+  source('02 Processing and analysis.R')
+  
+  # Load Shiny tool
+  source("03 R Shiny map.R")
+  
+   
+   
